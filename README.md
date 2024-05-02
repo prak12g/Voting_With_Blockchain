@@ -1,15 +1,15 @@
 # Voting_With_Blockchain
 The VotingSystem contract facilitates the administration and execution of a voting process. Here's a breakdown of its features:
 Enum ElectionState: Defines the possible states of the election: NOT_STARTED, ONGOING, and ENDED.
-Structs:
+#Structs:
 1.	Candidate: Represents a candidate participating in the election. It includes fields for id, name, proposal, and voteCount.
 2.	Voter: Represents a voter in the election. It includes fields for delegate, hasVoted, vote, and candidateId.
-State Variables:
+#State Variables:
 1.	admin: Stores the address of the administrator who manages the election process.
 2.	electionState: Tracks the current state of the election.
 3.	candidates: An array to store information about all the candidates.
 4.	voters: A mapping to store information about registered voters.
-Events:
+#Events:
 1.	ElectionStarted: Fired when the election is started.
 2.	ElectionEnded: Fired when the election is ended.
 3.	CandidateAdded: Fired when a new candidate is added to the election.
@@ -20,13 +20,13 @@ Events:
 8.	VoterCount: Fired when the count of voters is updated.
 9.	ElectionStateChecked: Fired when the current state of the election is checked.
 10.	Results: Fired to display the results of the election.
-Modifiers:
+#Modifiers:
 1.	onlyAdmin: Restricts access to functions only to the admin address.
 2.	onlyDuringElection: Restricts access to functions only during the ongoing election.
 3.	onlyBeforeElection: Restricts access to functions only before the election starts.
-Constructor:
+#Constructor:
 1.	Initializes the admin and sets the electionState to NOT_STARTED upon deployment.
-Public Functions:
+#Public Functions:
 1.	addCandidate: Allows the admin to add a new candidate before the election starts.
 2.	addVoter: Allows the admin to register a new voter before the election starts.
 3.	startElection: Allows the admin to start the election.
@@ -41,5 +41,6 @@ Public Functions:
 12.	VoterProfile: Returns the profile of a voter, including the candidate they voted for.
 13.	showResults: Returns the results of the election for a specific candidate.
 14.	getVoter: Returns the address of a voter and their delegate.
-The contract provides functionalities for initializing the election, registering candidates and voters, casting and delegating votes, and obtaining election results. It ensures that certain actions are only performed by the admin and within the appropriate stages of the election process.
+    
+#The contract provides functionalities for initializing the election, registering candidates and voters, casting and delegating votes, and obtaining #election results. It ensures that certain actions are only performed by the admin and within the appropriate stages of the election process.
 
